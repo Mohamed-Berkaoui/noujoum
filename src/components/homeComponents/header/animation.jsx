@@ -1,3 +1,5 @@
+import { delay } from "framer-motion";
+
 export const anim = (variants) => {
     return {
       initial: "initial",
@@ -21,6 +23,7 @@ export const anim = (variants) => {
       opacity:1,
       transition: {
         duration: 0.4,
+        delay:0.3
       },
     },
   };
@@ -28,8 +31,8 @@ export const anim = (variants) => {
   export const boxBanner = {
     animate: {
       transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.2,
+        delayChildren: 0.5,
+        staggerChildren: 0.5,
       },
     },
   };
