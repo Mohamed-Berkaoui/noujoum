@@ -1,4 +1,3 @@
-import Button from "../../../button/Button";
 import "./box.scss";
 import arrowIcon from "../../../../assets/home/Back Arrow.png"
 

@@ -24,6 +24,26 @@ export const anim = (variants) => {
       },
     },
   };
+
+  export const boxBanner = {
+    animate: {
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  
+  export const boxAni = {
+    initial: { y: 10  ,opacity:0},
+    animate: {
+      y: 0,
+      opacity:1,
+      transition: {
+        duration: 0.4,
+      },
+    },
+  };
   
   export const text = {
     Noujoum:"Noujoum",

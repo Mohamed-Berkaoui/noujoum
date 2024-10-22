@@ -54,8 +54,8 @@ const Slider = () => {
   return (
     <div className='slider-wrapper'>
       <motion.div
-        animate={{ x: "-85%"}}
-        transition={{ duration: isScrolling ?50:180, ease: 'linear', repeat: Infinity }}
+        animate={{ x: !isScrolling?"-85%":'-90%' }}
+        transition={{ duration: isScrolling ?50:220, ease: 'linear', repeat: Infinity }}
   className='slider-container' style={{ width: imageWidth }}
       >
         {images.concat(images).map((src, index) => (

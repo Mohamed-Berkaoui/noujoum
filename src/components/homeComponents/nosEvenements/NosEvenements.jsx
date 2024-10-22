@@ -4,7 +4,8 @@ import Box from "./box/Box";
 import creationTheatraleImg from "../../../assets/home/CRÉATION THÉÂTRALE_edited.jpg";
 import EvenmentArabeImg from "../../../assets/home/ÉVÉNEMENTS arabe_edited.jpg";
 import EvenmentEtrangerseImg from "../../../assets/home/ÉVÉNEMENTS ÉTRANGERS_edited.jpg";
-
+import {AnimatePresence, motion} from "framer-motion"
+import { anim, boxAni, boxBanner } from "../header/animation";
 const boxesContent = [
   {
     imgSrc: creationTheatraleImg,
@@ -38,17 +39,21 @@ function NosEvenements() {
         }
         key={'evrnmrnt'}
       />
-      <div className="boxes">
+      <AnimatePresence>
+      <motion.div {...anim(boxBanner)} className="boxes">
         {boxesContent.map((element,i) => (
-          <Box key={i}
+         <motion.div key={i} variants={boxAni} >
+           <Box
             image={element.imgSrc}
             title={element.title}
             description={element.description}
             buttonText={element.buttonText}
           />
+         </motion.div>
         ))}
  
-      </div>
+      </motion.div>
+      </AnimatePresence>
     </div>
   );
 }

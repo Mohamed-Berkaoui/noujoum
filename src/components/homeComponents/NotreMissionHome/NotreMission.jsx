@@ -6,7 +6,8 @@ import imageBox1 from "../../../assets/home/theater (2) 1.png";
 import imageBox2 from "../../../assets/home/microphone 1.png";
 import imageBox3 from "../../../assets/home/world 1.png";
 import imageBox4 from "../../../assets/home/stage 1.png";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { anim, boxAni, boxBanner } from "../header/animation";
 
 const boxesContent = [
   {
@@ -26,22 +27,39 @@ const boxesContent = [
   },
 ];
 
+const variantsChild = {
+  enter: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+  }
+};
 function NotreMission() {
   return (
     <div className="notreMission">
-      <HomeSectionTitle key={'mission'}
+      <HomeSectionTitle
+        key={"mission"}
         title={"Notre mission"}
         description={
           "   Excellence événementielle : notre engagement à  créer des expériences inoubliables."
         }
       />
-      <div className="boxes">
+      <AnimatePresence>
+      <motion.div   {...anim(boxBanner)} className="boxes">
         {boxesContent.map((element, i) => (
-      <motion.div className="notreMissionBox" initial={{top:50,opacity:0}} transition={{delay:0.1,duration:0.4}} whileInView={{top:0,opacity:1}}>  <Box key={i} imgSrc={element.imgSrc}>
-      {element.children}
-    </Box></motion.div>
+          <motion.div
+            className="notreMissionBox"
+       variants={boxAni}
+          >
+         
+            <Box key={i} imgSrc={element.imgSrc}>
+              {element.children}
+            </Box>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
