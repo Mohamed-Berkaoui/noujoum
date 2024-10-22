@@ -30,8 +30,8 @@ export const anim = (variants) => {
   export const boxBanner = {
     animate: {
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.3,
+        delayChildren: 0.5,
+        staggerChildren: 0.4,
       },
     },
   };

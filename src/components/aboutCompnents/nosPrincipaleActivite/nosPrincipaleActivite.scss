@@ -1,0 +1,33 @@
+.nos-principale-activite {
+  background: linear-gradient(
+    180deg,
+    #f4c43c 0%,
+    rgba(163, 103, 31, 0.47) 100%
+  );
+  padding: 50px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin:20px auto 40px;
+  @media (max-width:650px) {
+    font-size: 0.7rem;
+    padding: 30px;
+    width: 90%;
+  }
+  h4{
+  font-size: 2em;
+
+  }
+  ol{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    @media (max-width:650px) {
+    padding-left: 20px;
+      
+    }
+  }
+}

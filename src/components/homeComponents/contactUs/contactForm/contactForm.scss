@@ -8,6 +8,10 @@
   flex-wrap: wrap;
   border-radius: 5px;
   min-width: 250px;
+  @media (max-width: 650px) {
+    width: 94%;
+    flex-direction: column;
+  }
 
   .infos {
     margin: 7px;
@@ -32,13 +36,13 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
-      @media (max-width:1000px) {
+      @media (max-width: 1000px) {
         position: relative;
         top: 0%;
         transform: translate(0%, 0%);
         margin-top: 20px;
       }
-      .phonenumber{
+      .phonenumber {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -51,37 +55,34 @@
         align-items: center;
         gap: 18px;
         max-width: 90%;
-      
+
         img {
           height: 20px;
         }
       }
     }
-    .big-circle{
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: aliceblue;
-        position: absolute;
-        bottom: -40px;
-        right: -40px;
-        opacity: 0.2;
-        filter: blur(2px);
-
+    .big-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: aliceblue;
+      position: absolute;
+      bottom: -40px;
+      right: -40px;
+      opacity: 0.2;
+      filter: blur(2px);
     }
-    .small-circle{
-        width: 90px;
-        height:90px;
-        border-radius: 50%;
-        background-color: aliceblue;
-        position: absolute;
-        bottom: 50px;
-        right: 50px;
-        opacity: 0.3;
-       filter: blur(2px);
-
+    .small-circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: aliceblue;
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+      opacity: 0.3;
+      filter: blur(2px);
     }
-
   }
   form {
     flex: 1.7;
@@ -89,28 +90,30 @@
     grid-template-columns: 1fr 1fr;
     padding: 70px 50px 50px 50px;
     gap: 15px;
-    @media (max-width:600px) {
-display: flex;
-flex-direction: column;    }
-    div{
+    @media (max-width: 640px) {
+      display: flex;
+      flex-direction: column;
+    }
+    div {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      input,textarea{
+      input,
+      textarea {
         border: none;
         border-bottom: 3px solid rgba(128, 128, 128, 0.543);
         padding: 10px 0px;
         resize: none;
-        &:focus{
+        &:focus {
           outline: none;
-          border-bottom: 3px solid $yellow ;
+          border-bottom: 3px solid $yellow;
         }
       }
     }
-    .textearaBox{
+    .textearaBox {
       grid-column: 1/3;
     }
-    button{
+    button {
       grid-column: 2/3;
       background-color: $black;
       color: $white;
@@ -118,15 +121,14 @@ flex-direction: column;    }
       height: 40px;
       width: 80%;
       margin-top: 10px;
-      transition:all 0.2s ease;
+      transition: all 0.2s ease;
       cursor: pointer;
-      &:hover{
+      &:hover {
         scale: 1.02;
       }
-      &:active{
+      &:active {
         scale: 0.98;
       }
-}
-    
+    }
   }
 }

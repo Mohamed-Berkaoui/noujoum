@@ -18,6 +18,7 @@ function Header() {
         </p>
       </header>
       <Slider/>
+      <div className="overlay"/>
     </div>
   );
 }
