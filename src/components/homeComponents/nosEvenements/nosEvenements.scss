@@ -1,0 +1,12 @@
+@use "../../../assets/variables" as *;
+.nos-evenements {
+    background-color: $black;
+    
+    .boxes{
+        @include flexG(30px);
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 40px 0;
+
+    }
+}

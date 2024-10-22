@@ -1,0 +1,21 @@
+.slider-wrapper{
+    overflow: hidden;
+    width: 100%;
+    .slider-container{
+    display: flex;
+     white-space: nowrap;
+     align-items:center;
+     div{
+        min-width: 200px;
+        max-width: 300px;
+        min-height: 200px;
+        max-height: 350px;
+        position: relative;
+        border-radius: 15px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.352);
+        margin: 5px;
+        overflow: hidden;
+     }
+    }
+
+}

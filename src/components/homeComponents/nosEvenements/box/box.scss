@@ -1,0 +1,60 @@
+@use "../../../../assets/variables" as *;
+.nosEvenmentBox {
+  width: 300px;
+  height: 310px;
+  background-color: $yellow;
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2px;
+  position: relative;
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    height: 100%;
+    font-size: 0.9rem;
+    z-index: 4;
+    button {
+      width: 45%;
+      z-index: 4;
+
+      white-space: nowrap;
+      border: none;
+      height: 35px;
+      cursor: pointer;
+      display: flex;
+      background-color: $white;
+      align-items: center;
+      padding: 5px;
+      transition: all 0.2s ease;
+      border-radius: 5px;
+      &:hover {
+        scale: 1.05;
+      }
+      &:active {
+        scale: 0.9;
+      }
+      img {
+        height: 20px;
+        object-fit: contain;
+      }
+    }
+  }
+  .shadow {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-image: linear-gradient(to top, $black, transparent);
+    bottom: 0;
+    opacity: 0.4;
+  }
+}

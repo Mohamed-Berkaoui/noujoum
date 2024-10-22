@@ -1,0 +1,80 @@
+
+@use "_animations.scss" ;
+@use '_navbarMediaQueries.scss';
+@use '../../assets/variables'as *;
+
+.navbar-container {
+  position: fixed;
+z-index: 10000;
+width: 100%;
+
+  top: 0 !important;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  padding: 1rem;
+  background-color: $black;
+  border-bottom: 1px solid rgba(110, 110, 110, 0.301);
+  box-shadow:  0 2px 20px rgba(0, 0, 0, 0.219);
+  img{
+    height: inherit;
+  }
+  nav {
+    ul {
+      display: flex;
+      list-style-type: none;
+      gap: 2rem;
+      color: $white;
+      font-variant: small-caps;
+      font-weight: 600;
+      li {
+        position: relative;
+        cursor: pointer;
+        display: block;
+        padding: 1px;
+        z-index: 45555;
+        opacity: 0.7;
+        transition: all 0.2s ease;
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          width: 2px;
+          opacity: 0.6;
+          height: 100%;
+          background-color: $white;
+          transition: all 0.2s ease;
+        }
+        &::before {
+          left: 0px;
+        }
+        &::after {
+          right: 0px;
+        }
+        &:hover {
+          scale: 1.2;
+          opacity: 1;
+          &::after,
+          &::before {
+            opacity: 1;
+            height: 2px;
+            width: 100%;
+            left: 0;
+            right: 0;
+          }
+          &::after {
+            animation: animationBar 5s linear infinite;
+            bottom: -1px;
+          }
+          &::before {
+            animation: animationBar2 5s linear infinite;
+            top: -1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

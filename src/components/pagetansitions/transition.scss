@@ -1,0 +1,38 @@
+@use "../../assets/variables" as *;
+
+.curve {
+  z-index: 11;
+  top: 0;
+  svg,
+  .background {
+    position: fixed;
+    height: calc(100vh + 600px);
+    width: 100vw;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    z-index:11;
+    fill: $black;
+  }
+  .background {
+    background-color: $black;
+    transition: opacity 0s linear 0.1s;
+    position: absolute;
+    height: 100vh;
+    z-index: inherit;
+  }
+  .route {
+    position: fixed;
+
+    left: 50%;
+    top: 32%;
+    @include gradientText();
+    text-transform: uppercase;
+    font-size: 46px;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+    text-align: center;
+    z-index: 12;
+    width: 200px;
+  }
+}

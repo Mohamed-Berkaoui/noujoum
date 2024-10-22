@@ -1,0 +1,23 @@
+@use './assets/variables' as *;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+body {
+  // max-width: 50vw;
+  background-color: $black;
+  overflow-x: hidden !important;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.Main{
+  margin-top: 70px;
+}
+html{
+  scroll-behavior: smooth;
+  transition:all 0.1s ease;
+}

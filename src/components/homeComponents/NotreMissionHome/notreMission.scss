@@ -1,0 +1,21 @@
+@use "../../../assets/variables" as *;
+.notreMission {
+  min-height: 450px;
+  position: relative;
+  @include flexG(50px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  color: $white;
+  background-color: $black;
+
+  .boxes {
+    height: 100%;
+    width: 100%;
+    flex: 3;
+    @include flexG(20px);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
