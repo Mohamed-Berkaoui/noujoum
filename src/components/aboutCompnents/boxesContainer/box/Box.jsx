@@ -1,16 +1,9 @@
 import "./box.scss";
-import arrowIcon from "../../../../assets/home/Back Arrow.png";
-
+import {motion} from "framer-motion"
 function Box({ event }) {
-  // {
-  //   imgSrc: imgCart11,
-  //   location: "Festival International de Carthage ",
-  //   aritist: "Concert de Cheb Khaled",
-  //   date: "09 aout 2009",
-  //   video: "",
-  // },
+
   return (
-    <div className="about-box">
+    <motion.div initial={{opacity:0,y:80}} whileInView={{opacity:1,y:0}} transition={{delay:0.2,duration:0.6}} className="about-box">
       <div className="rotate">
         <img src={event.imgSrc} alt="" />
         <div className="more-infos">
@@ -30,7 +23,7 @@ function Box({ event }) {
           </section>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

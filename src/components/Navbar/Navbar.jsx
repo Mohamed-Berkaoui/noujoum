@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png"
+import{AnimatePresence, motion} from "framer-motion"
 import "./navbar.scss";
 function Navbar({ open, setOpen }) {
  function scrollToTop(){
   setTimeout(()=>{window.scrollTo(0,0)},500)
  }
   return (
-    <div className="navbar-container" >
-      <img src={logo} alt="logo" />
+    <AnimatePresence mode="popLayout">
+    <motion.div className="navbar-container"  layoutTransition>
+      <motion.img src={logo} alt="logo" layoutId='main-image-1' layoutTransition  />
       <nav onClick={() => setOpen(!open)}>
         <div className={open ? "hamburger-menu open" : "hamburger-menu"}>
           <div className={open ? "bar open" : "bar"}></div>
@@ -18,7 +20,7 @@ function Navbar({ open, setOpen }) {
          <Link onClick={scrollToTop} to={'/contact'}> <li>&nbsp;Contact&nbsp;</li></Link>
         </ul>
       </nav>
-    </div>
+    </motion.div></AnimatePresence>
   );
 }
 

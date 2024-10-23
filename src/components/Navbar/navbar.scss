@@ -5,7 +5,7 @@
 
 .navbar-container {
   position: fixed;
-z-index: 10000;
+z-index: 100;
 width: 100%;
 
   top: 0 !important;
@@ -33,7 +33,7 @@ width: 100%;
         cursor: pointer;
         display: block;
         padding: 1px;
-        z-index: 45555;
+        z-index: 101;
         opacity: 0.7;
         transition: all 0.2s ease;
         &::after,

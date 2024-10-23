@@ -1,7 +1,7 @@
 @use "../../assets/variables" as *;
 
 .curve {
-  z-index: 11;
+  z-index: 210;
   top: 0;
   svg,
   .background {
@@ -11,7 +11,7 @@
     pointer-events: none;
     left: 0;
     top: 0;
-    z-index:11;
+    z-index:210;
     fill: $black;
   }
   .background {
@@ -32,7 +32,7 @@
     transform: translateX(-50%);
     transition: all 0.5s;
     text-align: center;
-    z-index: 12;
+    z-index: 220;
     width: 200px;
   }
 }

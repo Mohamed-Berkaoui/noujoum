@@ -2,10 +2,11 @@ import "./contactForm.scss";
 import iconPhone from "../../../../assets/home/bxs_phone-call.png";
 import iconMail from "../../../../assets/home/ic_sharp-email.png";
 import iconLocation from "../../../../assets/home/carbon_location-filled.png";
+import {motion} from "framer-motion"
 
 function ContactForm() {
   return (
-    <div className="home-contact-form">
+    <motion.div initial={{opacity:0,y:80}} whileInView={{opacity:1,y:0}} transition={{delay:0.2,duration:0.6}} className="home-contact-form">
       <div className="infos">
         <div className="cordonnees">
           <h3>Coordonnées</h3>
@@ -53,7 +54,7 @@ function ContactForm() {
         </div>
           <button>Envoyer le message</button>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

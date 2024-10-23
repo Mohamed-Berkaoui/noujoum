@@ -54,7 +54,7 @@
         top: 80px;
         width: 80%;
         color: $black;
-        background-image: linear-gradient(to top right, rgba(245, 222, 179, 0.144), rgba(15, 11, 4, 0.144)); ;
+        background-image: linear-gradient(to top right, rgba(157, 145, 57, 0.664), rgba(15, 11, 4, 0.537)); ;
         backdrop-filter: blur(15px);
         flex-direction: column;
         justify-content: center;
@@ -63,6 +63,8 @@
         transition: all 0.7s ease;
         li{
             font-size: 2rem;
+    color: $white;
+
         }
       }
       ul.ulclosed {
