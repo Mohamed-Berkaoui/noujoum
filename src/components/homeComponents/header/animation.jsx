@@ -30,8 +30,8 @@ export const anim = (variants) => {
   export const boxBanner = {
     animate: {
       transition: {
-        delayChildren: 0.5,
-        staggerChildren: 0.4,
+        delayChildren: 0.3,
+        staggerChildren: 0.3,
       },
     },
   };
@@ -42,7 +42,7 @@ export const anim = (variants) => {
       y: 0,
       opacity:1,
       transition: {
-        duration: 0.7,
+        duration: 0.4,
       },
     },
   };

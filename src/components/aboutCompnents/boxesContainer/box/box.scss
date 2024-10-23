@@ -1,0 +1,91 @@
+@use '../../../../assets/variables' as  * ;
+
+.about-box{
+    width: 230px;
+    height: 320px;
+    position: relative;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    .rotate{
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            -webkit-backface-visibility: hidden; 
+            backface-visibility: hidden;
+        }
+        .more-infos{
+            position: absolute;
+            bottom: 0px;
+            height: 40px;
+            width: 100%;
+            -webkit-backface-visibility: hidden; 
+            backface-visibility: hidden;
+            display: flex;
+            color:$white;
+            align-items: center;
+            justify-content: end;
+            gap: 10px;
+            background-color: rgba(0, 0, 0, 0.635);
+            svg{
+                width: 20px;
+                height:  30px;
+                    position: relative;
+                fill:$white;
+               
+            }
+        }
+        
+        .infos{
+            -webkit-backface-visibility: hidden; 
+            backface-visibility: hidden;
+            position: absolute;
+            transform: rotateY(180deg);
+            background-color: black;
+            width: 100%;
+            height: 100%;
+       
+            section{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.438);
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                gap: 15px;
+                padding: 10px;
+                button{
+                    position: absolute;
+                    top:10%;
+                    right: 20px;
+                    border: none;
+                    padding: 5px;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    &:hover{
+                        scale:1.05
+                    }
+                    &:active{
+                        scale:0.96
+
+                    }
+                    }
+                
+            }
+
+        }
+   
+    }
+    &:hover .rotate{
+        transform: rotateY(180deg);
+    }
+    
+}

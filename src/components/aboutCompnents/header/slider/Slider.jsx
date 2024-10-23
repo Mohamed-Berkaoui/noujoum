@@ -1,23 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import "./slider.scss"
-import { motion,useScroll,useTransform } from 'framer-motion';
-import imgSlider1 from"../../../../assets/A propos/immg1.webp"
-import imgSlider2 from"../../../../assets/A propos/immg2.webp"
-import imgSlider3 from"../../../../assets/A propos/immg3.webp"
-import imgSlider4 from"../../../../assets/A propos/immg4.webp"
-import imgSlider5 from"../../../../assets/A propos/immg5.webp"
-import imgSlider6 from"../../../../assets/A propos/immg6.webp"
-
+import React, { useEffect, useState } from "react";
+import "./slider.scss";
+import { motion, useScroll, useTransform } from "framer-motion";
+import imgSlider1 from "../../../../assets/A propos/immg1.webp";
+import imgSlider2 from "../../../../assets/A propos/immg2.webp";
+import imgSlider3 from "../../../../assets/A propos/immg3.webp";
+import imgSlider4 from "../../../../assets/A propos/immg4.webp";
+import imgSlider5 from "../../../../assets/A propos/immg5.webp";
+import imgSlider6 from "../../../../assets/A propos/immg6.webp";
 
 const images = [
-imgSlider1,imgSlider2,imgSlider3,imgSlider5,imgSlider6,imgSlider4,
-imgSlider1,imgSlider2,imgSlider3,imgSlider5,imgSlider6,imgSlider4,
-imgSlider1,imgSlider2,imgSlider3,imgSlider5,imgSlider6,imgSlider4,
-imgSlider1,imgSlider2,imgSlider3,imgSlider5,imgSlider6,imgSlider4
-
-
-
-]
+  imgSlider1,
+  imgSlider2,
+  imgSlider3,
+  imgSlider5,
+  imgSlider6,
+  imgSlider4,
+  imgSlider1,
+  imgSlider2,
+  imgSlider3,
+  imgSlider5,
+  imgSlider6,
+  imgSlider4,
+  imgSlider1,
+  imgSlider2,
+  imgSlider3,
+  imgSlider5,
+  imgSlider6,
+  imgSlider4,
+  imgSlider1,
+  imgSlider2,
+  imgSlider3,
+  imgSlider5,
+  imgSlider6,
+  imgSlider4,
+];
 
 const Slider = () => {
   const [imageWidth, setImageWidth] = useState(0);
@@ -28,7 +44,6 @@ const Slider = () => {
 
   let scrollTimeout;
   const [isScrolling, setIsScrolling] = useState(false);
-  console.log("🚀 ~ Slider ~ isScrolling:", isScrolling)
 
   const handleScroll = () => {
     // Set the scrolling state to true
@@ -44,23 +59,32 @@ const Slider = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearTimeout(scrollTimeout); 
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollTimeout);
     };
   }, []);
   return (
-    <div className='slider-wrapper'>
+    <div className="slider-wrapper">
       <motion.div
-        animate={{ x: !isScrolling?"-85%":'-90%' }}
-        transition={{ duration: isScrolling ?50:220, ease: 'linear', repeat: Infinity }}
-  className='slider-container' style={{ width: imageWidth }}
+        animate={{ x: !isScrolling ? "-85%" : "-90%" }}
+        transition={{
+          duration: isScrolling ? 20 : 220,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+        className="slider-container"
+        style={{ width: imageWidth }}
       >
         {images.concat(images).map((src, index) => (
           <div key={index}>
-            <img src={src} alt={`Slide ${index}`} style={{ width: '100%',objectFit:"contain", height: '100%' }} />
+            <img
+              src={src}
+              alt={`Slide ${index}`}
+              style={{ width: "100%", objectFit: "contain", height: "100%" }}
+            />
           </div>
         ))}
       </motion.div>

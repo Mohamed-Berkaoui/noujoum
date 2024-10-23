@@ -28,7 +28,7 @@
       padding-right: 30%;
     }
     @media (max-width: 800px) {
-    padding-top: 30px;
+    padding-top: 80px;
 
       padding-right: 10%;
     }
@@ -52,11 +52,16 @@
     p{
       @media (max-width:650px) {
         text-align: justify;
+        font-size: 0.8rem;
+        padding-bottom: 20px;
         
       }
     }
     button {
       width: 150px;
+      @media (max-width:650px) {
+        margin-bottom: 30px;
+      }
     }
   }
 
