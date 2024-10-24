@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import logoNoujoum from "../../assets/logo.png";
 import "./transition.scss";
 
@@ -81,21 +81,21 @@ export default function Curve({ children }) {
     };
   }, []);
 
-  return (
-    <div className="page curve">
-      <div
+  return ( 
+    <motion.div className="page curve" initial={false}>
+      <motion.div initial={false}
         style={{ opacity: dimensions.width == null ? 1 : 0 }}
-        className="background"
+        className="background"  
       />
-      <motion.img
-        src={logoNoujoum}
+      <motion.img 
+        src={logoNoujoum} 
         alt=""
         className="route"
         {...createMotionProps(textVariants)}
       />
       {dimensions.width != null && <SVG {...dimensions} />}
       {children}
-    </div>
+    </motion.div>
   );
 }
 
@@ -116,9 +116,9 @@ const SVG = ({ height, width }) => {
         L0 0
     `;
 
-  return (
+  return ( 
     <motion.svg {...createMotionProps(translateVariants)}>
-      <motion.path
+      <motion.path 
         {...createMotionProps(curveVariants(initialPath, targetPath))}
       />
     </motion.svg>

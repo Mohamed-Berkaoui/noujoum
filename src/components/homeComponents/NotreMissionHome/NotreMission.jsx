@@ -45,7 +45,7 @@ function NotreMission() {
           "   Excellence événementielle : notre engagement à  créer des expériences inoubliables."
         }
       />
-      <AnimatePresence>
+      <AnimatePresence key={'animated'}>
       <motion.div   {...anim(boxBanner)} className="boxes">
         {boxesContent.map((element, i) => (
           <motion.div

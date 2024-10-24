@@ -3,6 +3,7 @@
 .about-boxes-container {
   background-color: $black;
   margin: 25px 0;
+
   .banner {
     text-align: center;
     position: relative;
@@ -35,7 +36,18 @@
   .boxes {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     flex-wrap: wrap;
+    width: 80%;
+    border-left: 2px solid $yellow;
+    border-right: 2px solid $yellow;
+    margin: auto;
+    padding: 0 5%;
+      @media (max-width:650px) {
+        width: 93%;
+        padding: 0 2%;
+
+      }
+
   }
 }

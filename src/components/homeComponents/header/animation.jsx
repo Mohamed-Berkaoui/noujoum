@@ -3,15 +3,16 @@ import { delay } from "framer-motion";
 export const anim = (variants) => {
     return {
       initial: "initial",
-      whileInView: "animate",
+      animate: "animate",
+      whileInView:"inView",
       variants,
     };
   };
   export const banner = {
     animate: {
       transition: {
-        delayChildren: 0.1,
-        staggerChildren: 0.05,
+        delayChildren: 0.3,
+        staggerChildren: 0.08,
       },
     },
   };
@@ -28,7 +29,7 @@ export const anim = (variants) => {
   };
 
   export const boxBanner = {
-    animate: {
+    inView: {
       transition: {
         delayChildren: 0.3,
         staggerChildren: 0.3,
@@ -38,7 +39,7 @@ export const anim = (variants) => {
   
   export const boxAni = {
     initial: { y: 10  ,opacity:0},
-    animate: {
+    inView: {
       y: 0,
       opacity:1,
       transition: {

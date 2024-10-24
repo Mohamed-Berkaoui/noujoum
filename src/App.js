@@ -35,13 +35,13 @@ function App() {
   const [reduceHeight, setReduceHeight] = useState(false);
   useEffect(()=>{setTimeout(() => {
     setInitialLoading(false)
-  }, 3000);},[])
+  }, 3500);},[])
   function openNavbar() {
     setNavbarOpen(!navbarOpen);
 
   }
   return (
-    <AnimatePresence mode="popLayout" >
+    <AnimatePresence mode="popLayout"  >
         {initialLoading ? <Loader/>:
     <motion.div key={"app-trans"}   initial="initial"
     animate="animate"
@@ -49,7 +49,7 @@ function App() {
     variants={appTrans}>
       <Navbar setReduceHeight={setReduceHeight} open={navbarOpen} setOpen={openNavbar} />
       <motion.div className="Main">
-        <AnimatePresence mode="wait" initial={false} >
+        <AnimatePresence mode="wait" initial={false}  >
           <Routes location={location} key={locationArr[1]}>
             <Route
               path="/"

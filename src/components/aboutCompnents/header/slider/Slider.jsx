@@ -1,49 +1,50 @@
 import React, { useEffect, useState } from "react";
 import "./slider.scss";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import imgSlider1 from "../../../../assets/A propos/immg1.webp";
 import imgSlider2 from "../../../../assets/A propos/immg2.webp";
 import imgSlider3 from "../../../../assets/A propos/immg3.webp";
 import imgSlider4 from "../../../../assets/A propos/immg4.webp";
 import imgSlider5 from "../../../../assets/A propos/immg5.webp";
 import imgSlider6 from "../../../../assets/A propos/immg6.webp";
-
+const imgs = [imgSlider1, imgSlider2, imgSlider3, imgSlider5, imgSlider6];
 const images = [
-  imgSlider1,
-  imgSlider2,
-  imgSlider3,
-  imgSlider5,
-  imgSlider6,
-  imgSlider4,
-  imgSlider1,
-  imgSlider2,
-  imgSlider3,
-  imgSlider5,
-  imgSlider6,
-  imgSlider4,
-  imgSlider1,
-  imgSlider2,
-  imgSlider3,
-  imgSlider5,
-  imgSlider6,
-  imgSlider4,
-  imgSlider1,
-  imgSlider2,
-  imgSlider3,
-  imgSlider5,
-  imgSlider6,
-  imgSlider4,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
+  ...imgs,
 ];
 
 const Slider = () => {
   const [imageWidth, setImageWidth] = useState(0);
+  // Base speed
+  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
     setImageWidth(images.length * 300); // Assuming max width of 300px
   }, []);
 
   let scrollTimeout;
-  const [isScrolling, setIsScrolling] = useState(false);
 
   const handleScroll = () => {
     // Set the scrolling state to true
@@ -66,15 +67,17 @@ const Slider = () => {
       clearTimeout(scrollTimeout);
     };
   }, []);
+
   return (
     <div className="slider-wrapper">
       <motion.div
-        animate={{ x: !isScrolling ? "-85%" : "-90%" }}
+        animate={{ x: !isScrolling ? "-85%" : "-90%" }} // Adjust based on your design
         transition={{
-          duration: isScrolling ? 20 : 220,
+          duration: isScrolling ? 150 : 1500, // Use current speed when scrolling, otherwise default speed
           ease: "linear",
           repeat: Infinity,
         }}
+        initial={true}
         className="slider-container"
         style={{ width: imageWidth }}
       >

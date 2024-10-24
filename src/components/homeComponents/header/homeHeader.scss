@@ -1,21 +1,22 @@
 @use "../../../assets/variables" as *;
 .homeHeader {
+  // margin-top: 110px;
   position: relative;
   min-height: 550px;
-  background-image: url(../../../assets/home/img-home.webp);
   background-size: cover;
+  width: 100%;
   .header {
     color: $white;
     z-index: 5;
     width: inherit;
-    min-height: 550px;
-    height: 100%;
+    min-height: 400px;
+    // height: 100%;
     position: relative;
-    background: radial-gradient(
-      circle,
-      rgba(0, 0, 0, 0.178) 0%,
-      rgba(14, 14, 14, 0.502) 58%
-    );
+    // background: radial-gradient(
+    //   circle,
+    //   rgba(0, 0, 0, 0.178) 0%,
+    //   rgba(14, 14, 14, 0.502) 58%
+    // );
     object-fit: cover;
     display: flex;
     gap: 30px;
@@ -23,20 +24,20 @@
     justify-content: center;
     padding-left: 5%;
     padding-right: 40%;
-    padding-bottom: 70px;
+    // padding-bottom: 70px;
     @media (max-width: 1000px) {
       padding-right: 30%;
     }
     @media (max-width: 800px) {
-    padding-top: 80px;
+      padding-top: 40px;
 
-      padding-right: 10%;
+      padding-right: 5%;
     }
     h2 {
-      font-size: 3rem;
-      line-height: 45px;
-      letter-spacing: 3px;
-      font-weight: 400;
+      font-size: 3.4rem;
+      line-height: 35px;
+      letter-spacing: 2px;
+      font-weight: 500;
       display: flex;
       flex-wrap: wrap;
       p {
@@ -44,47 +45,41 @@
         font-size: 2.5rem;
         letter-spacing: 1px;
         display: flex;
-        @media (max-width:650px) {
-          font-size: 2.1rem;
+        @media (max-width: 650px) {
+          font-size: 2.2rem;
         }
       }
     }
-    p{
-      @media (max-width:650px) {
+    p {
+      @media (max-width: 650px) {
         text-align: justify;
         font-size: 0.8rem;
-        padding-bottom: 20px;
-        
+        padding-bottom: 10px;
       }
     }
     button {
       width: 150px;
-      @media (max-width:650px) {
+      @media (max-width: 650px) {
         margin-bottom: 30px;
       }
     }
   }
 
-  .shadow,.shadow2{
-    height: 150px;
-    width: 120%;
-    max-width: 120vw;
-    overflow: hidden;
+ 
+  .overlay {
+    width: 200px; 
+    height: 200px;
+    background-color: $yellow;
+    border-radius: 50%;
     position: absolute;
-    bottom: 0px;
-    left: -100px;
-    background-color: $black;
-    filter: blur(40px);
-
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    filter: blur(160px);
+    opacity: 0.7;
+    @media (max-width:650px) {
+      
+      opacity: 0.9;
+    }
   }
-  .shadow{
-    opacity: 0.6;
-  }
-  .shadow2{
-    bottom: -50px;
-    filter: blur(40px);
-
-    
-  }
-
 }

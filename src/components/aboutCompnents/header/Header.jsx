@@ -1,12 +1,12 @@
 import "./header.scss";
-import Slider from "./slider/Slider";
+import {motion} from "framer-motion"
 
-function Header() {
+function Header() { 
   return (
     <div className="about-header">
       <header>
-        <h4>A PROPOS</h4>
-        <p>
+        <motion.h4 initial={{y:40,opacity:0}}  animate={{y:0,opacity:1}} transition={{delay:0.8,duration:0.4}}>A PROPOS</motion.h4>
+        <motion.p initial={{y:40,opacity:0}}  animate={{y:0,opacity:1}} transition={{delay:0.9,duration:0.4}}>
           Forte d'une expérience artistique qui s'étend sur près de quatre
           décennies, Noujoum Ben Ammar se positionne comme une entreprise
           éminente dédiée à l'enrichissement continu du paysage culturel
@@ -15,10 +15,10 @@ function Header() {
           concerts mettant en avant des artistes de renom, ainsi que notre
           participation active à des festivals, tant nationaux
           qu'internationaux, notamment le prestigieux Festival de Carthage.
-        </p>
+        </motion.p>
       </header>
-      <Slider/>
-      <div className="overlay"/>
+     <div className="shadow"/>
+     <div className="shadow2"/>
     </div>
   );
 }

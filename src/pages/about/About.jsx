@@ -93,12 +93,12 @@ function About() {
     <div className="about-page">
       <Header />
       <NosPrincipaleActivite />
-      <BoxesContainer date={2023} events={[events[0], events[1]]} />
-      <BoxesContainer date={2022} events={[events[2]]} />
+      <BoxesContainer date={""} events={events} />
+      {/* <BoxesContainer date={2022} events={[events[2]]} />
       <BoxesContainer date={2018} events={[events[3], events[4], events[5]]} />
       <BoxesContainer date={2014} events={[events[6]]} />
       <BoxesContainer date={2012} events={[events[7], events[8]]} />
-      <BoxesContainer date={2009} events={[events[9]]} />
+      <BoxesContainer date={2009} events={[events[9]]} /> */}
     </div>
   );
 }

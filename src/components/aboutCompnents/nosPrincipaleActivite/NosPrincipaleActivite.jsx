@@ -1,9 +1,9 @@
 import "./nosPrincipaleActivite.scss";
-
+import {motion} from "framer-motion"
 function NosPrincipaleActivite() {
   return (
-    <div className="nos-principale-activite">
-      <h4>Nos principales activités comprennent :</h4>
+    <motion.div initial={{y:40,opacity:0}}  animate={{y:0,opacity:1}} transition={{delay:0.9,duration:0.4}} className="nos-principale-activite">
+      <h4> Principales Activités  :</h4>
       <ol type="1">
         <li>Production et distribution de pièces de théâtre.</li>
         <li>
@@ -25,7 +25,7 @@ function NosPrincipaleActivite() {
         </li>
         <li>Location et exploitation de restaurants et cafés</li>
       </ol>
-    </div>
+    </motion.div>
   );
 }
 

@@ -17,7 +17,6 @@ function Footer() {
           <p>Nos event</p>
           <p>Artistes</p>
           <p>contact</p>
-          <p className="professional">Professional</p>
         </div>
         <div className="socialMedia">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">

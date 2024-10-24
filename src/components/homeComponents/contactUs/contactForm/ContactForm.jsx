@@ -6,7 +6,7 @@ import {motion} from "framer-motion"
 
 function ContactForm() {
   return (
-    <motion.div initial={{opacity:0,y:80}} whileInView={{opacity:1,y:0}} transition={{delay:0.2,duration:0.6}} className="home-contact-form">
+    <motion.div initial={{opacity:0,y:120}} whileInView={{opacity:1,y:0}} transition={{delay:0.2,duration:0.6}} className="home-contact-form">
       <div className="infos">
         <div className="cordonnees">
           <h3>Coordonnées</h3>
